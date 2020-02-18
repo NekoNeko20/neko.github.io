@@ -1,7 +1,21 @@
 ---
 layout: page
-title: 关于
+title: About
 permalink: /about/
 ---
 
-这是一个关于页面，请编辑about.md以介绍你的博客。
+## What's this page for?
+
+This is a memo page for some of my courses. 
+
+
+
+## Self Introduction
+
+Hi, I'm currently a junior at ZUEL, majoring in applied statistics. 
+
+
+
+## Interest Area
+
+Everything concerning statistics, haha.
