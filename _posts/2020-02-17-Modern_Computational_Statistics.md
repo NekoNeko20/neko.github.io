@@ -15,4 +15,4 @@ Modern Computational Statistics is a graduate course at PKU. See [Modern computa
 | Lecture   |  Date  |Notes     |
 |------   |------ |------|
 |Lecture 1  | 2020/2/17 |[Note1]({{sites.baseurl}}/notes/mcs/lec01.pdf)|
-
+|Lecture 2.1  | 2020/2/25 |[Note1]({{sites.baseurl}}/notes/mcs/lec02_1.pdf)|
