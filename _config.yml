@@ -69,7 +69,8 @@ url:
 # 那么就写成 "/repository-name"
 baseurl: 
 
-
+#新增
+markdown: kramdown
 #
 # !! 以下所有设置都不需要更改 !!
 #

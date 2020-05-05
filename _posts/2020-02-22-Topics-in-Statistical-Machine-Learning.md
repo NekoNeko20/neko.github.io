@@ -15,4 +15,5 @@ This page is for some simple review and summary for CMU course Statistical Machi
 |Topics  |  Date  |Notes     |
 |------   |------ |------|
 |Exponential Family |2020/04/08 |[Exp_Fam]({{sites.baseurl}}/notes/ml/exp_fam.pdf)|
+|Generalized Linear Model Notes by CMU|2020/05/08|[GLM]({{sites.baseurl}}/notes/ml/glm.pdf)|
 
