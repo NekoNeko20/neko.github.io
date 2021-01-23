@@ -28,6 +28,6 @@ Hi! I'm currently a junior undergraduate at Zhongnan University of Economics and
 |图像分类（非参数统计论文）|2020/01/08|[Nonpara]({{sites.baseurl}}/notes/work/nonpara.pdf)|
 |校内数模竞赛论文|2020/01/08|[modeling]({{sites.baseurl}}/notes/work/modeling.pdf)|
 |工行杯金融创新策划书|2019/11/08|[gonghang]({{sites.baseurl}}/notes/work/gonghang.pdf)|
-| CV | 2021/1/20 |[CV]({{sites.baseurl}}/notes/work/cv.pdf)|
+| CV | 2021/1/20 |[CV]({{sites.baseurl}}/notes/work/CV.pdf)|
 
 
