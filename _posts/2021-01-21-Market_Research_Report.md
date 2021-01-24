@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Market Research Report
+title: Street Stall Economy Market Research Report
 date: 2021-01-21
 Author: Yihan
 categories: [Research]
@@ -8,11 +8,11 @@ tags: [Research Presentation]
 comments: true
 ---
 
-![China's Street Stall Economy](http://pic1.hebei.com.cn/003/024/737/00302473754_9d022ac0.jpg)
+<img src="http://pic1.hebei.com.cn/003/024/737/00302473754_9d022ac0.jpg" style="zoom:50%" />
 
 ### Research Objectives
 
-This research mainly focuses on *Mining Potential Customers and Analyzing Traits For Street Stall Enocomies*. After the pandemic COVID-19, most large and medium-sized real economies have suffered severe setbacks, and their revenues greatly reduced. At the same time, because of the virus' superior infectious ability, most residents were required to be in quarantine at home. 
+This research mainly focuses on *Mining Potential Customers and Analyzing Traits For Street Stall Economy*. After the pandemic COVID-19, most large and medium-sized real economies have suffered severe setbacks, and their revenues greatly reduced. At the same time, because of the virus' superior infectious ability, most residents were required to be in quarantine at home. 
 
 Nevertheless, in the post-COVID-19 era, after several months of isolation, residents walk out of their houses with their long-repressed social desire. And they also need some kind of stimulus to reignite consumption. Stall economy can be such a stimulus, for its convenience both for customers and vendors. Stall vendors only need a car for transporting and displaying goods, and interested stall customers will grab something when passing by. Many residents always choose to take a walk after meal, go to large shopping centers and markets. Stall vendors see this phenomenon as an opportunity, and provide relatively cheap commodities to attract customers.
 
@@ -22,4 +22,27 @@ To solve these problems, we performed this investigation. The research object is
 
 ### Hot-button Issues Analysis Based on Text Mining
 
-By crawling online reports on Stall Economy, we want to know, what is the hot-button issues that residents and governments care about. During investigation, we discover that Xinhua.net has a 
+By crawling online reports on Stall Economy, we want to know, what is the hot-button issues that residents and governments care about. During our investigation, we discover that Xinhua.net has a dynamic composition, which is suitable for crawling. We crawled around 1000 reports on Xinhua.net about Street Market Economy, ranging from February 2018 to June 2020. 
+
+#### Word Cloud Analysis
+
+We used `Jieba` in `Python` for analysis. `Jieba` is a chinese-oriented word segmental tool. By counting the word frequency, `Jieba` can predict the phrase and the context that the word belongs to. 
+
+The result is shown below.
+
+![word_cloud.png](../images/posts_images/reports/word_cloud.png)
+
+We can see from the word cloud that, *Street Stall Economy*/*Employment*/*cars*/*boost*/*generation*/*Internet*/*Concept Stock* is what people most cared about. This reveals that, the development of Stall economy is not development in 'an' industry, but developments from all industries. Except for this, words like *Employment* reveal that, encouraging street stall economy can provide lots of job opportunities for the society, and also a relatively convenient employment platform for young people who are out of work.
+
+#### Sentimental Analysis
+
+Using the chinese-oriented natural language processing package, `snownlp`, we can perform sentimental analysis easily according to the reports we crawled from Xinhua.net. The sentimental analysis algorithm used in `snownlp` is based on Bayesian Inference. Compared to traditional sentimental analysis algos, this approach will provide more accurate results.
+
+### Analysis of Factors Affecting Customer Purchase Based on Lasso-Logistic Model
+
+### Potential Customer Mining Based on Clustering Methods
+
+### Results
+
+### Download Our Report Here!
+
