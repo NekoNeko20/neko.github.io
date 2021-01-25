@@ -8,7 +8,7 @@ tags: [Research Presentation]
 comments: true
 ---
 
-[toc]
+@[TOC]
 
 ### Research Objectives
 
