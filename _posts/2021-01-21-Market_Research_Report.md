@@ -8,9 +8,10 @@ tags: [Research Presentation]
 comments: true
 ---
 
-@[TOC]
+[1. Research Objectives](#1)
 
 ### Research Objectives
+<h2 id="1"></h2>
 
 This research mainly focuses on *Mining Potential Customers and Analyzing Traits For Street Stall Economy*. After the pandemic COVID-19, most large and medium-sized real economies have suffered severe setbacks, and their revenues greatly reduced. At the same time, because of the virus' superior infectious ability, most residents were required to be in quarantine at home. 
 
