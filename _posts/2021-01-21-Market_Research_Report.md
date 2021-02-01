@@ -9,6 +9,15 @@ comments: true
 ---
 
 [1. Research Objectives](#1)
+[2. Hot-button Issues Analysis Based on Text Mining](#2)
+[2.1 Word Cloud Analysis](#2.1)
+[2.2 Sentimental Analysis](#2.2)
+[2.3 Topic Extraction Based on Topic Modeling](#2.3)
+[3 Analysis of Factors Affecting Customer Purchase Based on Lasso-Logistic Model](#3)
+[3.1 Model Result Analysis](#3.1)
+[4]
+[5]
+
 
 ### Research Objectives
 <h2 id="1"></h2>
@@ -24,10 +33,12 @@ However, problems still exist. The competition between the protection of city en
 To solve these problems, we performed this investigation. The research object is Wuhan citizens. Because of the COVID-19, we cannot perform our supposed sampling procedure, which is a regret. This investigation will dive into the analysis of factors influencing citizens' choices of buying products, and clustering methods will be used to group these potential customers. We hope that this project can provide some advice for you.
 
 ### Hot-button Issues Analysis Based on Text Mining
+<h2 id="2"></h2>
 
 By crawling online reports on Stall Economy, we want to know, what is the hot-button issues that residents and governments care about. During our investigation, we discover that Xinhua.net has a dynamic composition, which is suitable for crawling. We crawled around 1000 reports on Xinhua.net about Street Market Economy, ranging from February 2018 to June 2020. 
 
 #### Word Cloud Analysis
+<h3 id="2.1"></h3>
 
 We used `Jieba` in `Python` for analysis. `Jieba` is a chinese-oriented word segmental tool. By counting the word frequency, `Jieba` can predict the phrase and the context that the word belongs to. 
 
@@ -38,12 +49,14 @@ The result is shown below.
 We can see from the word cloud that, *Street Stall Economy*/*Employment*/*cars*/*boost*/*generation*/*Internet*/*Concept Stock* is what people most cared about. This reveals that, the development of Stall economy is not development in 'an' industry, but developments from all industries. Except for this, words like *Employment* reveal that, encouraging street stall economy can provide lots of job opportunities for the society, and also a relatively convenient employment platform for young people who are out of work.
 
 #### Sentimental Analysis
+<h3 id="2.2"></h3>
 
 Using the chinese-oriented natural language processing package, `snownlp`, we can perform sentimental analysis easily according to the reports we crawled from Xinhua.net. The sentimental analysis algorithm used in `snownlp` is based on Bayesian Inference. Compared to traditional sentimental analysis algos, this approach will provide more accurate results.
 
 According to our analysis results, the pollarity of sentimental score distribution is obvious. most reports are postive on the topic(around 90%), but there are still some reports show negative attitudes towards this topic(around 5%). The average sentimental score of reports is 0.75, which means that, the general evaluation is postive. But as it shows before, some negative feedbacks still exist.
 
 #### Topic Extraction Based on Topic Modeling
+<h3 id="2.3"></h3>
 
 We use Topic Modeling to mine the latent topics behind all these news reports. This Topic Modeling algorithm will extract $n$ topics from all provided texts($n$ can be defined). Those topics contain several keywords, helping define the meaning of these topics. The topics extracted are as below:
 
@@ -65,6 +78,7 @@ According the key words, we define the 5 topics as:
 
 
 ### Analysis of Factors Affecting Customer Purchase Based on Lasso-Logistic Model
+<h2 id="3"></h2>
 
 During our field investigation, because of COVID-19 regulations, we cannot perform stratified sampling as we had wished to. After checking the literatures on controlling sampling error in online investigation, we decided to use *Central Intercept Test(CIT)* combined with online investigation instead. We collected 814 samples in our investigation.
 
@@ -73,6 +87,7 @@ After we implemented sampling and field investigation, we cleaned the data and c
 All variables are Dummy Variables.
 
 The model is set as:
+
 $$
 y_i = \beta_0 + \beta_1 male+\beta_2 age_18+\beta_3 age_{18\sim30}+\beta_4 age_{31\sim50}\\
 +\beta_5 edu_1+\beta_6 edu_2 +\beta_7 edu_3 +\beta_8 edu_4+\beta_9 urb+\beta_{10}mem\\
@@ -99,6 +114,8 @@ According to this figure, we chose the 6 variables as: $sex, age_{18\sim 30}, in
 |Pol|0.980|2.663|
 
 #### Model Result Analysis
+<h3 id="3.1"></h3>
+
 - **Gender:** The coefficient appears to be negative. According the the $OR$ value, male's possibility in buying stall products is 77.1% more than woman.
 - **Age:** Only $Age18\_30$ is chosen buy the $LASSO$ model, which means that there is no definite corelation between age and customers' willingness in buying stall products. This only means that, customers aging from 18 to 30 is just a little less willing to shop at street stalls, than people who are over 50.
 - **Education Level:**  There is no obvious difference in people's willingness to shop in stalls concerning their education level.
@@ -107,7 +124,32 @@ According to this figure, we chose the 6 variables as: $sex, age_{18\sim 30}, in
 
 
 ### Potential Customer Mining Based on Clustering Methods
+<h2 id="4"></h2>
 
+For further customer analysis, we clustered them into five clusters, using K-Means. The variables we used in analysis are: *label,gender. Acceptance Level of Product Prices(Lowest and Highest),pol, go to stalls or not, age, wage*. We grouped the five clusters, and calculated the variables' means for analysis. 
+
+The result is as below(the five clusters are labeled as 0,1,2,3,4):
+
+|label|gender|Acceptance(Lower Bound)|Acceptance(Higher Bound)|Possibility of Buying|
+|----|----|----|----|----|
+|0|84.5%|$3.38|$83.44|0.50|
+|1|52.4%|$2.41|$67.00|0.29|
+|2|35.0%|$9.54|$122.31|0.62|
+|3|72.4%|$3.40|$127.00|0.70|
+|4|53,8%|$2.92|$112.39|0.46|
+(Not Complete, to see more results, download the pdf version of this report.)
+
+Acccording to the cluster result, we further analyzed the clustered customer's average scoring on these topics: *Importance of Prices, Importance of Quality, Importance of Variety, Importance of Service, Importance of Shopping Environment, Importance of Convenience*. Results are shown in the pdf report, Table 5.7..
+
+We define the five classes as *Important Potential Customers*, *Important Developing Customers*, *Secondary Potential Customers*, *Normal Potential Customers*
+ and *Low-value Customers*.
+
+ Their scoring is shown as below:
+ ![potential.png](../images/posts_images/reports/potential.png)
+
+- **Important Potential Customers:** Customers of this kind are mostly male, aging from 30 to 50, with an annual income ranging from 100,000 to 200,000. They are most precise about the products' quality and parking convenience. Their price acceptance range is $3~$130.
+- **Important Developing Customers:** Customers of this kind are mostly young female, with an annual income below 100,000.
+-  
 ### Results
 
 ### Download Our Report Here!
