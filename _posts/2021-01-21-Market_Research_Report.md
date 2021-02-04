@@ -9,14 +9,23 @@ comments: true
 ---
 
 [1. Research Objectives](#1)
+
 [2. Hot-button Issues Analysis Based on Text Mining](#2)
+
 [2.1 Word Cloud Analysis](#2.1)
+
 [2.2 Sentimental Analysis](#2.2)
+
 [2.3 Topic Extraction Based on Topic Modeling](#2.3)
+
 [3 Analysis of Factors Affecting Customer Purchase Based on Lasso-Logistic Model](#3)
+
 [3.1 Model Result Analysis](#3.1)
+
 [4]
+
 [5]
+
 
 
 ### Research Objectives
@@ -148,9 +157,29 @@ We define the five classes as *Important Potential Customers*, *Important Develo
  ![potential.png](../images/posts_images/reports/potential.png)
 
 - **Important Potential Customers:** Customers of this kind are mostly male, aging from 30 to 50, with an annual income ranging from 100,000 to 200,000. They are most precise about the products' quality and parking convenience. Their price acceptance range is $3~$130.
-- **Important Developing Customers:** Customers of this kind are mostly young female, with an annual income below 100,000.
--  
+- **Important Developing Customers:** Customers of this kind are mostly young female, with an annual income below 100,000. They have high requirements and expectations concerning all factors, relatively. Their price acceptance range is $9.54~$122.3.
+- **Secondary Potential Customers:** Customers of this kind are mostly young male, with an annual income below 100,000. Compared with important potential customers and important developing customers, they have a relatively low expectation for street stall products. They are most concerned with prices, variety and convenience. Their price acceptance range is $3.38~$83.44.
+- **Normal Potential Customers:** Customers of this kind are people aging from 18 to 30, with an annual income around 300,000. Their price acceptance range is $2.92~$112.38.They are most concerned with convenience and product quality.
+
+- **Low-value Customers:** Only 29% of them has shopped in street stalls.They are mostly elder people, aging from 30 o 50, with an annual income beyond 300,000. This kind of people are always used to shopping in supermarkets.
+
+
 ### Results
+
+- Female are more interested in shopping at street stalls, and elders are more attracted to this kind of shopping module than young people.
+
+- Policy publicity can help promote the development of street stall economy.
+
+- Customers are always most concerned of the shopping convenience and product quality in street stalls.
+
+- Media is most concerned of governments' regulations on street stalls, and whether this regulation will conflict with their promotion.
+
+According to our analysis, we suggest that, stall vendors should view elder female with an annual income between 100,000 and 200,000 as their main target customers. They should also promise on shopping convenience and the quality of their products. 
+
+Stall vendors should also develop relevant products according to our clustered customer crowd.
 
 ### Download Our Report Here!
 
+[PDF REPORT CHINESE]({{sites.baseurl}}/notes/work/report.pdf)
+
+Our english version not out yet!
