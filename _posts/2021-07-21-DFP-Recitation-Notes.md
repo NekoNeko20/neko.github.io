@@ -223,5 +223,13 @@ np.eye(N) # NxN identity matrix
 
 - Boolean Indexes
 
+```python
+b_rows = [True, False, True]
+a1[b_rows, :]
+# Select row 0 and row 2.
+a1[a1 < -5] = 8
+# Threshold: -5, larger: 8
+```
+
 
 
