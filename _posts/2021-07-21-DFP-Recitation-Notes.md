@@ -1,16 +1,14 @@
 ---
-layout:post
-title:95-888 Data Focused Python Recitation
-date:2021-07-21
-author:Yihan
-categories:[courses]
-tags:[mcsnote]
-comments:true
+layout: post
+title: 95-888 Data Focused Python Recitation
+date: 2021-07-21
+Author: Yihan
+categories: [courses]
+tags: [mcsnote]
+comments: true
 ---
 
 
-
-## 95-888 Data Focused Python
 
 This note mainly serves as a **Recitation** for CMU 95-888 Data Focused Python placement test.
 
