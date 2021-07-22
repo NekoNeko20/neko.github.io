@@ -231,5 +231,51 @@ a1[a1 < -5] = 8
 # Threshold: -5, larger: 8
 ```
 
+### Intro to Pandas
 
+#### Scalar Arithmetic
+
+- `math` does not work on pandas
+- Slicing:
+
+```python
+s1[:2] # to but not including s1[2]
+s3['AAPL':'CSCO'] # 'AAPL' to and including 'CSCO'
+```
+
+#### `DataFrame` Cell
+
+- Retrieve a *cell*:
+  - `f1['CEO_buy'][2]   # True`  Not efficient!
+  - `f1.loc[2]['CEO_buy']    # True`
+  - `f1.loc[2, 'CEO_buy']    # True` 
+- Delete a column: `del`
+- Add row: `f1.loc[4] = [....]` *Upcast: If the data types of the new row don't match the existing , the column types will be upcast, and deleting this row will not affect the upcast*
+-  `loc` and `iloc`:
+  - `loc` gets rows and columns using `labels`
+  - `iloc` gets rows and columns using `integers`
+- Missing value
+  - `f2.add(f3, fill_value=0)`  where `fill_value` fills `f2` but not f3
+- Sorting:
+
+```python
+f4.sort_index() # sort rows
+f4.sort_index(axis=1) # sort cols
+# args: ascending = True
+```
+
+- Some Summary Statistics:
+
+```python
+f5.sum() # Series of column sums
+f5.mean()
+f5.var() # unbiased
+f5.describe() # count\mean\std\min\25%\50%\75%\max
+```
+
+- Other Operations:
+  - `idxmin(), idxmax()`: row of min, max
+  - `prod()` : product of row vals by col
+  - `cumsum(), cumprod()`: cumulative sum/product
+  - .....and more
 
