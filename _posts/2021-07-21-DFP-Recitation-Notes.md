@@ -279,3 +279,103 @@ f5.describe() # count\mean\std\min\25%\50%\75%\max
   - `cumsum(), cumprod()`: cumulative sum/product
   - .....and more
 
+### Regular Expressions, Reading & Writing Formatted Data
+
+| Expression | Meaning                                                      |
+| ---------- | ------------------------------------------------------------ |
+| `c`        | Matches the character `c`                                    |
+| `\c`       | Matches `c`, even if `c` is a regular expression special character |
+| `^`        | Matches the start of a string                                |
+| `$`        | Matches the end of a string                                  |
+| `.`        | Matches any single character in a string                     |
+| `[abc]`    | Matches *one* character, either *a* or *b* or *c*            |
+| `[^abc]`   | Matches one character, which is nor a or b or c              |
+| `[a-z]`    | Matches *one* character, in range a thru z                   |
+| `c*`       | Matches a sequence of 0 or more occurences of `c`            |
+| `e1|e2`    | Matches *e1* or *e2*                                         |
+| `e+`       | Matches a sequence of 1 or more occurences                   |
+|            |                                                              |
+
+#### Raw Strings
+
+- To search a `\`
+
+```python
+# pat = '\\\\'
+pat = r'\\'
+```
+
+#### Other Functions
+
+```python
+re.findall()    # return matches as list of strings
+re.split()      # split string by occurrences of expressions
+re.sub()        # replace
+```
+
+### Parsing HTML Tables Using Pandas
+
+```python
+tb1_list = pd.read_html(html, attrs={'class':'t-chart'},header=0,index_col=0)
+
+type(tb1_list[0])
+# <class 'pandas.core.frame.DataFrame'>
+```
+
+### JSON API Data
+
+```python
+sbdf = pd.read_json(json_link) # https://.....json
+type(sbdf)
+# DataFrame
+```
+
+### String Operations
+
+```python
+# Capitalization
+s = 'this is a test'
+s.capitalize()
+# 'This is a test'
+s.title()
+# 'This Is A Test'
+s.upper()
+# 'THIS IS A TEST'
+s = 'word'
+s2 = s.center(10)
+s2
+# '   word   '
+len(s2)
+# 10
+s2 = s.center(10, '-')
+s2
+# '---word---'
+s2.strip()
+# 'word'
+s2.lstrip()
+#'word   '
+s2.rstrip()
+#'   word'
+s.count('t')
+# 3
+s.find('t') # much like .indexOf
+# 0
+```
+
+#### String Formatting
+
+- `d` : for *decimal(base 10)* **int**
+- `s` : for *string*
+- `f` : for *fixed-point* float
+- `e` : for *exponential* float
+
+#### String Formatting Justification
+
+- `{:<width c}` left-justified
+- `{:^width c}` entered
+- `{:>width c}` right-justified
+
+For **float** output, you can specify a **specification**.
+
+`{:width.precision f}` float in width, fixed point, and precision after decimal point.
+
