@@ -136,9 +136,38 @@ s1 = {value} # one-item set
 
 #### Web Scraping
 
+`Beautiful Soup` can be used to parse `html` or `xml` documents.
 
+```python
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen(url)
+bsyc = BeautifulSoup(html.read(), 'lxml')
+fout = open(txt, 'wt', encoding='utf-8')
+fout.close()
+```
 
+#### Example Functions
 
+```python
+bsyc.title # Returns the first <title> tag
+bsyc.title.string # Returns the content of the first title
+bsyc.title.parent.name # returns parent tag
+bsyc.find_all('title') # create list of all titles
+```
+
+#### Scraping a Yield Curve
+
+```python
+table_list = bsyc.findAll('table')
+tc_table_list = bsyc.findAll('table', 't-chart')
+tc_table = tc_table_list[0]
+for c in tc_table.children:
+	print(str(c)[:50])
+for c in tc_table.children:
+	for r in c.children:
+		print(r.contents)
+```
 
 
 
@@ -378,4 +407,36 @@ s.find('t') # much like .indexOf
 For **float** output, you can specify a **specification**.
 
 `{:width.precision f}` float in width, fixed point, and precision after decimal point.
+
+### Reading & Writing Files Revisit
+
+#### Text File
+
+```python
+fin = open('dir/*.txt','rt',encoding='utf-8')
+fout = open('dir/*.txt','wt',encoding='utf-8')
+for line in fin:
+	fout.write(line)
+fout.close()
+```
+
+#### Binary File
+
+```python
+fin = open(..., 'rb',...)
+fout = open(..., 'wb', ...)
+```
+
+#### CSV
+
+```python
+with open('....csv', 'r') as file:
+	for line in file:
+		print line
+    
+with open('....csv', 'w') as file:
+  writer = csv.writer(file)
+  writer.writerow(["index",...])
+  ...
+```
 
