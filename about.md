@@ -4,11 +4,6 @@ title: About
 permalink: /about/
 ---
 
-## What's this page for?
-
-This is a memo page for some of my courses. 
-
-
 
 ## Self Introduction
 
